@@ -1,1 +1,4 @@
-
+FROM koenkk/zigbee2mqtt
+MAINTAINER shuangyang<shuangyang1983@126.com>
+WORKDIR /app
+COPY configuration.yaml /app/configuration.yaml
