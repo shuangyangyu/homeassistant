@@ -1,1 +1,1 @@
-# hass
+homeassistant一些配置信息
