@@ -1,0 +1,23 @@
+### 说明文件
+
+1. 单个容器
+
+```
+docker run \
+   -it \
+   -v /home/shuangyang/z2m04data:/app/data \
+   --device=/dev/ttyS0 \
+   -e TZ=Europe/Amsterdam \
+   -v /run/udev:/run/udev:ro \
+   --privileged=true \
+   --name z2m04 \
+   koenkk/zigbee2mqtt
+```
+
+2. 条件
+
+   - 查看硬件的连接镜框
+
+   - 查看硬件的权限
+
+   - 必须准备好mtqq服务器
