@@ -17,6 +17,6 @@ mqtt:
 # Serial settings
 serial:
   # Location of CC2531 USB sniffer
-  port: /dev/ttyACM
+  port: /dev/设备
 advanced:
   log_level: debug
