@@ -1,7 +1,7 @@
 
 zigbee2mqtt说明文件
 
-设备接入
+1. 设备接入
 
 命令：
 dmesg | grep ttyS*
@@ -16,7 +16,7 @@ shuangyang@shuangyang:~$ dmesg | grep ttyS*
 test -w /dev/ttyACM0 && echo success || echo failure           #测试权限
 sudo chown shuangyang /dev/ttyACM0                             #更改权限
 
-配置文件
+2. 配置文件
 # Home Assistant integration (MQTT discovery)
 homeassistant: false
 ​
@@ -40,7 +40,7 @@ serial:
 advanced:
   log_level: debug
 
-单独容器启动
+3. 单独容器启动
 docker run \
    -it \
    -v /home/shuangyang/z2m04data:/app/data \
