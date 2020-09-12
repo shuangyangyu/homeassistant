@@ -1,26 +1,22 @@
 
 zigbee2mqtt说明文件
+
 设备接入
 
 命令：
 dmesg | grep ttyS*
 输出情况：
-
-
 shuangyang@shuangyang:~$ dmesg | grep ttyS*
 [    0.004000] console [tty0] enabled
 [    0.953827] 00:05: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
 [    0.989616] tty tty19: hash matches
 [    3.917662] cdc_acm 2-2.1:1.0: ttyACM0: USB ACM device
+
 设备权限
-
-
 test -w /dev/ttyACM0 && echo success || echo failure           #测试权限
-
 sudo chown shuangyang /dev/ttyACM0                             #更改权限
+
 配置文件
-
-
 # Home Assistant integration (MQTT discovery)
 homeassistant: false
 ​
@@ -43,9 +39,8 @@ serial:
   port: /dev/ttyACM
 advanced:
   log_level: debug
+
 单独容器启动
-
-
 docker run \
    -it \
    -v /home/shuangyang/z2m04data:/app/data \
