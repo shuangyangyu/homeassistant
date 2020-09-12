@@ -1,1 +1,5 @@
-
+FROM ubuntu:trusty
+MAINTAINER shuangyang<shuangyang1983@126.com>
+COPY mosquitto.conf /mosquitto/config/mosquitto.conf
+RUN touch /mosquitto/config/pwfile.conf && chmod -R 755 /mosquitto/config/pwfile.conf &&mosquitto_passwd -b /mosquitto/config/pwfile.conf passname passwd
+WORKDIR /mosquitto
