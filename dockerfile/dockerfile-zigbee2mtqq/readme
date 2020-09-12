@@ -3,8 +3,6 @@ zigbee2mqtt说明文件
 设备接入
 
 命令：
-
-
 dmesg | grep ttyS*
 输出情况：
 
