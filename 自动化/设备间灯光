@@ -1,0 +1,27 @@
+  alias: 设备间灯光开启
+  description: '当打开门时，开启设备间灯光'
+  trigger:
+  - entity_id: binary_sensor.0x158d00042348f3_contact
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.hassmart_cd7c13_1
+    service: switch.turn_on
+  mode: restart
+- id: '1603720571496'
+  alias: 设备间灯光关闭
+  description: '当关闭门时，设备间灯光关闭'
+  trigger:
+  - entity_id: binary_sensor.0x158d00042348f3_contact
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.hassmart_cd7c13_1
+    service: switch.turn_off
+  mode: restart
